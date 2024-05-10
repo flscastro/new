@@ -1,0 +1,5 @@
+sudo -u backupuser ssh-keygen -t rsa -b 2048
+
+sudo crontab -u backupuser -e
+
+0 0 * * * /usr/bin/ansible-playbook /caminho/para/playbook.yml
